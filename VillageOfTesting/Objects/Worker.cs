@@ -38,7 +38,7 @@ namespace VillageOfTesting.Objects
             DaysHungry = 0;
         }
 
-        public void DoWork()
+        public virtual void DoWork()
         {
             if (!Alive)
             {
