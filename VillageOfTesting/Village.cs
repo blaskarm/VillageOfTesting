@@ -153,7 +153,7 @@ namespace VillageOfTesting
 
         public void AddWorker(string name, string occupation)
         {
-            if (OccupationDictionary.ContainsKey(occupation))
+            if (OccupationDictionary.ContainsKey(occupation) && Workers.Count < 6)
             {
                 IOccupationAction jobInterface = OccupationDictionary[occupation];
                 Worker worker = new Worker(name, occupation, jobInterface);
