@@ -1,0 +1,15 @@
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\bin\Debug\net8.0\VillageOfTesting.exe
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\bin\Debug\net8.0\VillageOfTesting.deps.json
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\bin\Debug\net8.0\VillageOfTesting.runtimeconfig.json
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\bin\Debug\net8.0\VillageOfTesting.dll
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\bin\Debug\net8.0\VillageOfTesting.pdb
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\obj\Debug\net8.0\VillageOfTesting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\obj\Debug\net8.0\VillageOfTesting.AssemblyInfoInputs.cache
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\obj\Debug\net8.0\VillageOfTesting.AssemblyInfo.cs
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\obj\Debug\net8.0\VillageOfTesting.csproj.CoreCompileInputs.cache
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\obj\Debug\net8.0\VillageOfTesting.sourcelink.json
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\obj\Debug\net8.0\VillageOfTesting.dll
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\obj\Debug\net8.0\refint\VillageOfTesting.dll
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\obj\Debug\net8.0\VillageOfTesting.pdb
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\obj\Debug\net8.0\VillageOfTesting.genruntimeconfig.cache
+C:\Users\emilin002\source\repos\VillageOfTesting\VillageOfTesting\obj\Debug\net8.0\ref\VillageOfTesting.dll
