@@ -152,61 +152,58 @@ namespace VillageOfTestingTest
         [Fact]
         public void CompleteProject_BuildingHasEffect()
         {
-            var mockCompleteAction = new Mock<ICompleteAction>();
-            var possibleProject = new PossibleProject("Woodmill", 5, 1, 1, mockCompleteAction.Object);
-            var possibleProjects = new Dictionary<string, PossibleProject>
-            {
-                { "Woodmill", possibleProject }
-            };
-            var projects = new List<Project>();
-
             var workers = new List<Worker>
             {
-                new Worker("Finn", "builder", Mock.Of<IOccupationAction>())
+                new Worker("Alice", "builder", Mock.Of<IOccupationAction>())
             };
+            var projects = new List<Project>();
+            var village = new Village(false, 10, 20, 10, workers, new List<Building>(), projects, new Dictionary<string, IOccupationAction>(), new Dictionary<string, PossibleProject>(), 1, 1, 1, 6, 0);
 
-            var village = new Village(false, 0, 20, 10, workers, new List<Building>(), projects, new Dictionary<string, IOccupationAction>(), possibleProjects, 1, 1, 1, 6, 0);
+            var woodmillComplete = new WoodmillComplete(village);
+            var possibleProject = new PossibleProject("Woodmill", 10, 5, 1, woodmillComplete);
+            village.PossibleProjects.Add("Woodmill", possibleProject);
+
 
             village.AddProject("Woodmill");
-            village.Day();
+            workers[0].DoWork();
+            for (int i = 0; i < 5; i++)
+            {
+                village.Day();
+            }
 
             Assert.Single(village.Projects);
             Assert.Equal("Woodmill", village.Projects[0].Name);
+            Assert.Equal(2, village.WoodPerDay);
         }
 
         [Fact]
         public void FullGame_Simulation_WinGame()
         {
-            // Arrange
             var mockOccupationAction = new Mock<IOccupationAction>();
-            var mockCompleteAction = new Mock<ICompleteAction>();
             var occupationDictionary = new Dictionary<string, IOccupationAction>
             {
                 { "builder", mockOccupationAction.Object }
-            };
-            var possibleProject = new PossibleProject("Castle", 10, 5, 3, new CastleComplete());
-            var possibleProjects = new Dictionary<string, PossibleProject>
-            {
-                { "Castle", possibleProject }
             };
             var workers = new List<Worker>
             {
                 new Worker("Alice", "builder", mockOccupationAction.Object)
             };
             var projects = new List<Project>();
-            var village = new Village(false, 20, 20, 20, workers, new List<Building>(), projects, occupationDictionary, possibleProjects, 1, 1, 1, 6, 0);
+            var village = new Village(false, 20, 20, 20, workers, new List<Building>(), projects, occupationDictionary, new Dictionary<string, PossibleProject>(), 1, 1, 1, 6, 0);
 
-            // Act
+            var castleComplete = new CastleComplete(village);
+            var possibleProject = new PossibleProject("Castle", 10, 5, 3, castleComplete);
+            village.PossibleProjects.Add("Castle", possibleProject);
+
             village.AddProject("Castle");
             for (int i = 0; i < 3; i++)
             {
-                village.Day(); // Simulate the days required to complete the project
+                village.Day();
             }
 
-            // Assert
             Assert.Single(village.Projects);
             Assert.Equal("Castle", village.Projects[0].Name);
-            Assert.True(village.GameOver); // Game should be over
+            Assert.True(village.GameOver);
         }
     }
 }

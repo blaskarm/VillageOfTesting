@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emilin002\\source\\repos\\VillageOfTesting\\VillageOfTestingTest\\VillageOfTestingTest.csproj": {}
+    "C:\\Users\\Emil\\source\\repos\\VillageOfTesting\\VillageOfTestingTest\\VillageOfTestingTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emilin002\\source\\repos\\VillageOfTesting\\VillageOfTestingTest\\VillageOfTestingTest.csproj": {
+    "C:\\Users\\Emil\\source\\repos\\VillageOfTesting\\VillageOfTestingTest\\VillageOfTestingTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emilin002\\source\\repos\\VillageOfTesting\\VillageOfTestingTest\\VillageOfTestingTest.csproj",
+        "projectUniqueName": "C:\\Users\\Emil\\source\\repos\\VillageOfTesting\\VillageOfTestingTest\\VillageOfTestingTest.csproj",
         "projectName": "VillageOfTestingTest",
-        "projectPath": "C:\\Users\\emilin002\\source\\repos\\VillageOfTesting\\VillageOfTestingTest\\VillageOfTestingTest.csproj",
-        "packagesPath": "C:\\Users\\emilin002\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emilin002\\source\\repos\\VillageOfTesting\\VillageOfTestingTest\\obj\\",
+        "projectPath": "C:\\Users\\Emil\\source\\repos\\VillageOfTesting\\VillageOfTestingTest\\VillageOfTestingTest.csproj",
+        "packagesPath": "C:\\Users\\Emil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Emil\\source\\repos\\VillageOfTesting\\VillageOfTestingTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\emilin002\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Emil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\emilin002\\source\\repos\\VillageOfTesting\\VillageOfTesting\\VillageOfTesting.csproj": {
-                "projectPath": "C:\\Users\\emilin002\\source\\repos\\VillageOfTesting\\VillageOfTesting\\VillageOfTesting.csproj"
+              "C:\\Users\\Emil\\source\\repos\\VillageOfTesting\\VillageOfTesting\\VillageOfTesting.csproj": {
+                "projectPath": "C:\\Users\\Emil\\source\\repos\\VillageOfTesting\\VillageOfTesting\\VillageOfTesting.csproj"
               }
             }
           }
@@ -68,7 +67,7 @@
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.5.3, )"
+              "version": "[2.8.1, )"
             },
             "xunit.runner.visualstudio": {
               "target": "Package",
@@ -91,24 +90,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\emilin002\\source\\repos\\VillageOfTesting\\VillageOfTesting\\VillageOfTesting.csproj": {
+    "C:\\Users\\Emil\\source\\repos\\VillageOfTesting\\VillageOfTesting\\VillageOfTesting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emilin002\\source\\repos\\VillageOfTesting\\VillageOfTesting\\VillageOfTesting.csproj",
+        "projectUniqueName": "C:\\Users\\Emil\\source\\repos\\VillageOfTesting\\VillageOfTesting\\VillageOfTesting.csproj",
         "projectName": "VillageOfTesting",
-        "projectPath": "C:\\Users\\emilin002\\source\\repos\\VillageOfTesting\\VillageOfTesting\\VillageOfTesting.csproj",
-        "packagesPath": "C:\\Users\\emilin002\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emilin002\\source\\repos\\VillageOfTesting\\VillageOfTesting\\obj\\",
+        "projectPath": "C:\\Users\\Emil\\source\\repos\\VillageOfTesting\\VillageOfTesting\\VillageOfTesting.csproj",
+        "packagesPath": "C:\\Users\\Emil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Emil\\source\\repos\\VillageOfTesting\\VillageOfTesting\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\emilin002\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Emil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -117,7 +116,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -156,7 +154,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
