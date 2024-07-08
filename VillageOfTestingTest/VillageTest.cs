@@ -152,57 +152,51 @@ namespace VillageOfTestingTest
         [Fact]
         public void CompleteProject_BuildingHasEffect()
         {
-            var workers = new List<Worker>
-            {
-                new Worker("Alice", "builder", Mock.Of<IOccupationAction>())
-            };
-            var projects = new List<Project>();
-            var village = new Village(false, 10, 20, 10, workers, new List<Building>(), projects, new Dictionary<string, IOccupationAction>(), new Dictionary<string, PossibleProject>(), 1, 1, 1, 6, 0);
-
-            var woodmillComplete = new WoodmillComplete(village);
-            var possibleProject = new PossibleProject("Woodmill", 10, 5, 1, woodmillComplete);
-            village.PossibleProjects.Add("Woodmill", possibleProject);
-
-
+            Village village = new Village();
+            
+            village.Wood = 10;
+            village.Metal = 5;
+            
+            village.AddWorker("carl", "builder");
             village.AddProject("Woodmill");
-            workers[0].DoWork();
-            for (int i = 0; i < 5; i++)
+
+            while (village.Projects.Any(p => p.Name == "Woodmill" && p.DaysLeft > 0))
             {
                 village.Day();
             }
 
-            Assert.Single(village.Projects);
-            Assert.Equal("Woodmill", village.Projects[0].Name);
             Assert.Equal(2, village.WoodPerDay);
         }
 
         [Fact]
         public void FullGame_Simulation_WinGame()
         {
-            var mockOccupationAction = new Mock<IOccupationAction>();
-            var occupationDictionary = new Dictionary<string, IOccupationAction>
-            {
-                { "builder", mockOccupationAction.Object }
-            };
-            var workers = new List<Worker>
-            {
-                new Worker("Alice", "builder", mockOccupationAction.Object)
-            };
-            var projects = new List<Project>();
-            var village = new Village(false, 20, 20, 20, workers, new List<Building>(), projects, occupationDictionary, new Dictionary<string, PossibleProject>(), 1, 1, 1, 6, 0);
+            Village village = new Village();
 
-            var castleComplete = new CastleComplete(village);
-            var possibleProject = new PossibleProject("Castle", 10, 5, 3, castleComplete);
-            village.PossibleProjects.Add("Castle", possibleProject);
+            village.AddWorker("Janne", "builder");
+            village.AddWorker("Loppan", "farmer");
+            village.AddWorker("Mange", "miner");
+            village.AddWorker("Leopold", "lumberjack");
 
-            village.AddProject("Castle");
-            for (int i = 0; i < 3; i++)
+            string projectName = "Castle";
+
+            while (village.Wood < 50 || village.Metal < 50)
             {
                 village.Day();
             }
 
-            Assert.Single(village.Projects);
-            Assert.Equal("Castle", village.Projects[0].Name);
+            if (village.Wood >= 50 && village.Metal >= 50)
+            {
+                village.AddProject(projectName);
+                Assert.Contains(village.Projects, p => p.Name == projectName);
+            }
+
+            int maxDays = 51;
+            for (int i = 0; i < maxDays && village.Projects.Any(p => p.Name == projectName && p.DaysLeft > 0); i++)
+            {
+                village.Day();
+            }
+
             Assert.True(village.GameOver);
         }
     }

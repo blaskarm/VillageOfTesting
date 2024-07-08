@@ -169,8 +169,8 @@ namespace VillageOfTesting
             if (PossibleProjects.ContainsKey(name))
             {
                 PossibleProject possibleProject = PossibleProjects[name];
-                if (Wood > possibleProject.WoodCost &&
-                        Metal > possibleProject.MetalCost)
+                if (Wood >= possibleProject.WoodCost &&
+                        Metal >= possibleProject.MetalCost)
                 {
                     Wood -= possibleProject.WoodCost;
                     Metal -= possibleProject.MetalCost;
